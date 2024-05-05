@@ -13,13 +13,10 @@ jobs:
         
 
     steps: 
-
+    
       - checkout 
-      
-	    - run: make lint
-
-      - run: make deps 
-
+      - run: make lint
+      - run: make deps
       - run: make test       
 
 workflows: 
