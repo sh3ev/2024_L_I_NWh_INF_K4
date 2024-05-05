@@ -8,7 +8,7 @@ jobs:
 
     machine: 
 
-      image: ubuntu-2004:202104-01 
+      image: ubuntu-2204:2024.01.2
 
         
 
@@ -17,7 +17,8 @@ jobs:
       - checkout 
       - run: make lint
       - run: make deps
-      - run: make test       
+      - run: make test
+      - run: make docker_build       
 
 workflows: 
 
