@@ -1,4 +1,4 @@
-.PHONY: test deps lint
+.PHONY: test
 
 deps:
 	pip install -r requirements.txt
@@ -7,6 +7,6 @@ deps:
 lint:
 	flake8 hello_world test
 test:
-	python -m pytest test
+	PYTHONPATH=. py.test --verbose -s
 run:
-	python hello_world/app.py
+	python main.py
